@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/largest-number/
 # Credit: https://leetcode.com/problems/largest-number/solution/
+# https://practice.geeksforgeeks.org/problems/largest-number-formed-from-an-array1117/1
 
 class LargerNumKey(str):
     def __lt__(x, y):
