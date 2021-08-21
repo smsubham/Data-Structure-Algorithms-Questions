@@ -1,0 +1,21 @@
+# https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/
+# Source: https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/discuss/441422/JavaPythonC%2B%2B-0ms-short-and-simple-all-8-ways-to-win-in-one-array
+class Solution:
+    def tictactoe(self, moves: List[List[int]]) -> str:
+        A=[0]*8
+        B=[0]*8
+        for i in range(len(moves)):
+            r,c=moves[i]
+            player = A if i%2==0 else B
+            player[r] += 1
+            player[c+3] += 1
+            if r==c:
+                player[6] += 1
+            if r==2-c:
+                player[7] += 1
+        for i in range(8):
+            if A[i]==3:
+                return "A"
+            if B[i]==3:
+                return "B"
+        return "Draw" if len(moves) == 9 else "Pending"
