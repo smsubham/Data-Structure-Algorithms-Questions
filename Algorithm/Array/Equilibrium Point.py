@@ -1,7 +1,21 @@
 #https://practice.geeksforgeeks.org/problems/equilibrium-point-1587115620/1
+#https://leetcode.com/problems/find-pivot-index/
 
 # Source: https://www.geeksforgeeks.org/equilibrium-index-of-an-array/
+#Source: https://leetcode.com/problems/find-pivot-index/discuss/109255/Short-Python-O(n)-time-O(1)-space-with-Explanation
 # O(n) time, O(1) space
+
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        # Time: O(n)
+        # Space: O(1)
+        left, right = 0, sum(nums)
+        for index, num in enumerate(nums):
+            right -= num
+            if left == right:
+                return index
+            left += num
+        return -1
 
 # User function Template for python3
 
