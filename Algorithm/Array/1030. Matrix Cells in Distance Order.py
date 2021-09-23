@@ -1,0 +1,7 @@
+#https://leetcode.com/problems/matrix-cells-in-distance-order/
+
+
+#https://leetcode.com/problems/matrix-cells-in-distance-order/discuss/278786/Python-1-line-sorting-based-solution
+class Solution:
+    def allCellsDistOrder(self, rows: int, cols: int, rCenter: int, cCenter: int) -> List[List[int]]:
+        return sorted([(i, j) for i in range(rows) for j in range(cols)], key=lambda p: abs(p[0] - rCenter) + abs(p[1] - cCenter))
