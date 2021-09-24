@@ -1,5 +1,5 @@
 #https://leetcode.com/problems/sort-array-by-parity/
-
+#see solution section
 
 class Solution(object):
     def sortArrayByParity(self, A):

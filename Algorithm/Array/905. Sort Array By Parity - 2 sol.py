@@ -1,5 +1,5 @@
 #https://leetcode.com/problems/sort-array-by-parity/
-
+#from solution section
 
 #Approach 1: Sort
 
